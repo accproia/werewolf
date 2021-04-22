@@ -1,0 +1,17 @@
+[package]
+name = "werewolf"
+version = "0.1.0"
+authors = ["pror0ck <pror0ck@inbox.ru>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.5", features = ["full", "tracing"] }
+telegram-bot = "0.9.0"
+futures = "0.3"
+log = { version = "0.4", features = ["max_level_trace", "release_max_level_warn"] }
+env_logger = "0.8"
+
+[patch.crates-io]
+telegram-bot = {git = "https://github.com/vtavernier/telegram-bot.git"}
